@@ -1,0 +1,38 @@
+#container{
+    display: flex;
+    
+}
+#main{
+    display: flex;
+    justify-content: space-between;
+}
+
+#right{
+
+    width:80%;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-right: 50px;
+    
+}
+
+img{
+    width:230px;
+    height:310px;
+}
+#left{
+    width:20%;
+    margin-left: 60px;
+}
+#right>div{
+    margin-bottom: 10px;
+}
+h3{
+    color:brown;
+}
+#left>h3{
+    color:darkblue;
+}
+h2{
+    text-align: center;
+}
