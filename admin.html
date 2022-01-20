@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+
+    <form>
+       <input type="text" placeholder="name" id="name">
+       <input type="text" placeholder="price" id="price">
+       <input type="text" placeholder="image" id="img">
+       <input type="text" placeholder="image1" id="img1">
+       <input type="text" placeholder="image2" id="img2">
+       <input type="text" placeholder="image3" id="img3">
+       <input type="text" placeholder="color" id="color">
+       <input type="text" placeholder="brand" id="brand">
+       
+       <input type="submit">
+    </form>
+    <a href="product.html"><h3>click here to go product page</h3></a>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", newitem)
+    var prod = JSON.parse(localStorage.getItem("Gap_product")) || []
+    function newitem(event){
+        event.preventDefault()
+        var name = document.querySelector("#name").value
+        var price = document.querySelector("#price").value
+        var image = document.querySelector("#img").value 
+        var color = document.querySelector("#color").value
+        var brand = document.querySelector("#brand").value
+        var image1 = document.querySelector("#img1").value 
+        var image2 = document.querySelector("#img2").value 
+        var image3 = document.querySelector("#img3").value 
+
+        var newpro = {
+            name: name,
+            price: price,
+            image: image,
+            image1: image1,
+
+            image2: image2,
+            image3: image3,
+            color:color,
+            brand:brand
+        }
+
+        prod.push(newpro);
+        localStorage.setItem("Gap_product", JSON.stringify(prod))
+        
+    }
+    
+</script>
