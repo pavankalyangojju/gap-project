@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Products.css">
+</head>
+<body>
+    
+        <div>
+        <h2>DRESSES</h2>
+        <div id="main">
+            <div><p>Womens / Dresses</p><br></div>
+            <div>
+                
+    <select id="select" onchange = "price()">
+        <option value="" >Sort By</option>
+        <option value="low">low-high</option>
+        <option value="high">high-low</option>
+    </select>
+            </div>
+        </div>
+    </div>
+    <div id = "container">
+        <div id ="left">
+           
+            <h3>Just Arrived</h3>
+            <p>New Arrivals</p>
+            <p>The Gap Collective</p>
+            <p>Artist Tees</p>
+            <p>The Matching Sets Shop</p>
+            <p>Responsibly-Made Shop</p>
+
+            <h3>Deals</h3>
+            <h4>Sale - Additional 50% off</h4>
+           
+                <h3>Categories</h3>
+                <p>Shop All Styles</p>
+                <p>Jeans</p>
+            
+           <h3>Dresses</h3>
+           <p>Jumpsuits & Rompers</p>
+           <p>T-Shirts</p>
+           <p>Shirts & Tops</p>
+           <p>Hoodies</p>
+           <p>Sweatshirts & Sweatpants</p>
+           <p>Sweaters</p>
+           <p>Outerwear & Jackets</p>
+           <p>Pants & Leggings</p>
+           <p>Joggers</p>
+           <p>Shorts</p>
+           <p>Skirts</p>
+           <p>Swim</p>
+           <p>Shoes & Accessories</p>
+
+           <h3>Active wear</h3>
+           <p>Shop All Styles</p>
+           <p>Sports Bras</p>
+           <p>Tops</p>
+           <p>Sweatshirts & Jackets</p>
+           <p>Leggings & Joggers</p>
+           <p>Shorts</p>
+           <p>Accessories</p>
+
+           <h3>GapBody</h3>
+           <p>Shop all styles</p>
+           <p>Bras</p>
+           <p>Undies</p>
+           <p>Pajamas & Loungewear</p>
+
+           <h3>More Sizes</h3>
+           <p>The Petite Shop</p>
+           <p>The Tall Shop</p>
+           <p>Maternity</p>
+
+           <h3>Featured Shops</h3>
+           <p>GapFit Shop by Activity</p>
+           <p>The Logo Shop</p>
+           <p>Matching For All</p>
+           <p>Teen Collection</p>
+
+
+        </div>
+        
+        <div id = "right"></div>
+    </div>
+</body>
+</html>
+<script>
+    var arr = JSON.parse(localStorage.getItem("Gap_product"));
+      display(arr);
+    function display(arr){
+        document.getElementById("right").textContent = "";
+        arr.map((elem)=>{
+     
+let div = document.createElement("div")
+div.addEventListener("click", ()=>{
+
+    single(elem)
+
+})
+
+let img = document.createElement("img")
+img.src = elem.image;
+
+let name = document.createElement("p")
+name.textContent = elem.name;
+
+let price = document.createElement("h3")
+price.textContent = elem.price
+
+let brand = document.createElement("p")
+brand.textContent = elem.brand
+
+div.append(img, name, price, brand)
+
+document.getElementById("right").append(div);
+
+        })
+    }
+    function price(){
+                   var value = document.querySelector("#select").value;
+                   if(value=="low"){
+                       arr.sort(function(a,b){
+                           return Number(a.price.slice(1,6)) - Number(b.price.slice(1,6))
+                       })
+                   }else if(value=="high"){
+                           arr.sort(function(a,b){
+                            return Number(b.price.slice(1,6)) - Number(a.price.slice(1,6))
+
+                           })
+
+                       }
+                   
+                  display(arr)
+
+                  
+               }  
+    function  single(elem){
+
+        localStorage.setItem("single_product",JSON.stringify(elem));
+    }
+               
+    
+</script>
