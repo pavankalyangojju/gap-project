@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./payment.css" />
+    <style></style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="left">
+        <h2 class="center">CHECKOUT</h2>
+        <div id="shippingMethod">
+          <h4>SHIPPING METHOD</h4>
+          <div class="select">
+            <input type="checkbox" class="checkbox" />
+            <div class="day">
+              <p>Thusday, Feb 3</p>
+              <p class="font">No Rush 7-9 business days</p>
+              <h5 style="color: green; line-height: 12px">
+                iF YOUR ORDER IS OVER $50, YOU HAVE OPTION TO SELECT NO RUSH
+                SHIPPING
+              </h5>
+              <p class="font" style="line-height: 12px">
+                We'll still do our best to ship your purchase quickly, but our
+                fulfillment teams would appreciate the extra few days.
+              </p>
+            </div>
+            <p>$5</p>
+          </div>
+          <hr />
+          <div class="select">
+            <input type="checkbox" class="checkbox" />
+            <div class="day">
+              <p>Tuesday, Feb 1</p>
+              <p class="font">Basic 5-7 business days</p>
+            </div>
+            <p>$5</p>
+          </div>
+
+          <hr />
+          <div class="select">
+            <input type="checkbox" class="checkbox" checked />
+            <div class="day">
+              <p>Friday, Jan 28</p>
+              <p class="font">Standard 3-5 business days</p>
+            </div>
+            <p>$7</p>
+          </div>
+          <hr />
+          <div class="select">
+            <input type="checkbox" class="checkbox" />
+            <div class="day">
+              <p>Wednesday, Jan 26</p>
+              <p class="font">Express 2-3 business days</p>
+            </div>
+            <p>$17</p>
+          </div>
+          <hr />
+        </div>
+
+        <!-- address div -->
+        <div id="address">
+          <h4>SHIPPING ADDRESS</h4>
+          <input type="text" id="name" placeholder="Full Name" />
+          <input type="text" id="street" placeholder="Street Address" />
+          <input type="number" id="number" placeholder="Phone Number" />
+          <button id="continue">CONTINUE TO PAYMENT</button>
+        </div>
+
+        <!-- payment method -->
+        <div id="payment">
+          <h4>PAYMENT METHOD</h4>
+          <div id="pay"></div>
+          <div class="otp"></div>
+        </div>
+      </div>
+
+      <div id="right">
+        <p class="center">Help available 7am-1am EST 877-755-9348</p>
+        <!-- order summary div -->
+        <div id="orderSummary">
+          <h4>ORDER SUMMARY</h4>
+          <div class="flex">
+            <p>Subtotal</p>
+            <p id="subtotal"></p>
+          </div>
+
+          <div class="flex">
+            <p>shipping</p>
+            <p>$7.00</p>
+          </div>
+          <div class="flex">
+            <p>Est.Tax</p>
+            <p>$0.00</p>
+          </div>
+          <hr />
+          <div class="flex">
+            <h2>Total</h2>
+            <h2 id="total">$189.85</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./payment.js"></script>
