@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gap checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="./home.css">
+   
+  </head>
+  <body>
+     <!-----------------navbar--------------------->
+     <div id="cont"></div>
+
+     <div id="Feedback">Feedback</div>
+
+
+    <div id="container">
+      <!-- Left Div -->
+      <div id="left">
+        <div id="firstPurchase">
+          <div id="offerDetail">
+            <div style="margin: 10px">
+              <img
+                src="https://secure-www.gap.com/Asset_Archive/AllBrands/assets/shoppingBag/gp/Card_Gap.svg"
+                alt="img"
+              />
+            </div>
+            <div>
+              <p>
+                <b>Save 25%</b>on your first purchase of Gap items and enjoy
+                free shipping when you open a new Gap Good Rewards Credit Card.
+                Ends 1/18. Exclusions Apply*
+              </p>
+              <a href="#">*Offer Details</a>
+            </div>
+            <hr />
+          </div>
+          <div id="SavingwithCard">
+            <div>
+              <p>Total</p>
+              <p>$69.95</p>
+            </div>
+            <div>
+              <p>Savings with Card</p>
+              <p>-$17.49</p>
+            </div>
+            <hr />
+            <div>
+              <b><p>Total with Card</p></b>
+              <b> <p>$52.46</p></b>
+            </div>
+            <p style="color: gray">Before tax</p>
+          </div>
+          <button id="applyNow">APPLY NOW</button>
+        </div>
+        <div id="mybag">
+          <h3>My Bag</h3>
+          <div style="display: flex;" >
+            <img
+              src="https://secure-www.gap.com/static_content/onesitecategory/components/mfe/shopping-bag/static/d9001a37ed353b3a426cd3d644c7f7ea.svg"
+            />
+             <p id= "shippingLength"></p>
+          </div>
+        </div>
+        <div id="red">
+          <p class="icon">&#x21</p><p>
+            Items on this site are unavailable to order or ship outside of North
+            America <a href="#">Find your regional site</a>
+          </p>
+        </div>
+        <div id="blue"><div><P class="icon">	
+            &#128712</P><p>
+          
+            Some of our most popular items can only be saved in your bag for 2
+            hours.
+          </p></div>
+          <p id="cross">
+            &#10006
+          </p>
+        </div>
+        <!-- selected bag items -->
+        <div id="bagItems">  </div>
+        <!-- best seller div -->
+        <h3 style="font-weight:90 ;">BEST SELLERS</h3>
+        <div id="slider" >
+          <span >&#139</span>
+          <span >&#155</span>
+          <div id="row">
+          <div class="col-md-12">
+            <div class="slider_img">
+              <img
+                src="https://secure-www.gap.com/webcontent/0028/368/260/cn28368260.jpg"
+                alt="" class="slider_img"
+              />
+            </div>
+            <p class="slider_name">Utility popover dress</p>
+          </div>
+    
+          <div class="col-md-12">
+            <div class="slider_img">
+              <img   class="slider_img"
+                src="https://www3.assets-gap.com/webcontent/0028/250/763/cn28250763.jpg"
+                alt=""  
+              />
+            </div>
+            <p class="slider_name">Denim Popover Dress</p>
+          </div>
+    
+          <div class="col-md-12">
+            <div class="slider_img">
+              <img  class="slider_img"
+                src="https://www.gap.com/webcontent/0028/492/263/cn28492263.jpg"
+                alt=""
+              />
+            </div>
+            <p class="slider_name">Cotton Big Shirt</p>
+          </div>
+    
+          <div class="col-md-12">
+            <div class="slider_img">
+              <img  class="slider_img"
+                src="https://www.gap.com/webcontent/0027/962/956/cn27962956.jpg"
+                alt=""
+              />
+            </div>
+            <p class="slider_name">Gap Logo Mockneck Sweatshirt</p>
+          </div>
+    
+          <div class="col-md-12">
+            <div class="slider_img">
+              <img  class="slider_img"
+                src="https://www4.assets-gap.com/webcontent/0028/275/893/cn28275893.jpg"
+                alt=""
+              />
+            </div>
+            <p class="slider_name">Printed Peplum Top</p>
+          </div>
+    
+          <div class="col-md-12">
+            <div class="slider_img">
+              <img  class="slider_img"
+                src="https://www4.assets-gap.com/webcontent/0028/265/954/cn28265954.jpg"
+                alt=""
+              />
+            </div>
+            <p class="slider_name">Oversized Anorak Parka</p>
+          </div>
+          </div>
+        </div>
+        <!-- save for later -->
+        <h3 style="font-weight: 90;" >Saved For Later</h3>
+        <div id="saveItems"></div>
+      </div>
+
+      <!-- Right Div -->
+      <div id="right">
+          <div id="orderSummary">
+              <h3>Order Summary</h3>
+             
+              <div><p>Your order is $50+!</p>
+            <div id="blueHR"></div>
+               <p>For FREE shipping on orders $50+, <a href="#">sign in</a>  or <a href=""> join now</a>
+           </p></div>
+           <div class="flex price"><P>Subtotal</P><p id="priceValue">  </p></div>
+               <div class="flex price"><h3>Estimated total</h3><h3 id="priceValue2"></h3></div>
+               <p style="color: grey;
+                       font-size: 13px;
+                       line-height: 0;">Tax calculated in checkout</p>
+                       <p style="font-size: 13px;">or 4 interest-free payments of $27.48 with 
+                      <img src="https://secure-www.gap.com/Asset_Archive/GPWeb/content/DPG/icons/paypal-logo.svg" width="60"> Pay in 4ⓘ or 
+                      <img src="https://secure-www.gap.com/static_content/onesitecategory/components/mfe/shopping-bag/static/eefe7c6af2a0e9697432f1a0647d8076.svg" width="60"> ⓘ</p>
+
+                      <button id="checkoutBtn" onclick="goToPayment()">CHECKOUT</button>
+                      <button id="paypal"><img src="https://secure-www.gap.com/Asset_Archive/GPWeb/content/DPG/icons/paypal-logo.svg" 
+                        width="80"></button>
+                        <p style="color: grey;
+                        font-size: 12px;">PayPal & Afterpay: Limits apply to Gap Inc. Credit Card Rewards</p>
+          </div>
+          <!-- promo code div -->
+          <div id="promos">
+            <h3 style="font-weight: 90;">Promos</h3>
+            
+         <input id="promo-input" type="text" placeholder=" Enter Promo Code" required >
+         <!-- <label class="floating-label" > Enter Promo Code</label>
+             -->
+            <button id="promoBtn">APPLY</button>
+          </div>
+
+          <!-- My rewards -->
+          <div id="myRewards">
+            <h3 style="line-height: 0; font-weight: 90;">My Rewards</h3>
+            <div class="flex"><img src="https://secure-www.gap.com/static_content/onesitecategory/components/mfe/shopping-bag/static/3503bacfeb772242dbafcf9164197c73.svg"
+               width="30">
+              <p>  Rewards Members get free shipping on all orders $50+, earn points on each purchase, plus other exclusive benefits.</p></div>
+                <p style="padding-left: 30px;
+                line-height: 0;"><a href="#">Sign in</a>or <a href="#">join now.</a></p>
+
+          </div>
+
+          <!-- extra 25% off -->
+          <div id="extraOff"><img src="https://secure-www.gap.com/Asset_Archive/GPWeb/content/0028/482/985/assets/promo2/011022_JustGotBetter_US_SC_CARD_DESK.svg" width="320"></div>
+      </div>
+
+
+
+      <!--  -->
+    </div>
+    <div id="foot"></div>
+  </body>
+</html>
+
+<script type="module">
+  import navbar from "./components/navbar.js";
+  let cont = document.getElementById("cont");
+  cont.innerHTML = navbar();
+
+  import footer from "./components/footer.js";
+  document.getElementById("foot").innerHTML = footer();
+
+
+
+</script>
+<script src="checkout.js">
+  
+</script>
