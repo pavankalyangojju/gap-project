@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <!-- <div id="cont"></div> -->
+    <div id="sign">
+      <form onsubmit="Login(event)">
+        <h1>Login</h1>
+
+        <input type="text" id="username_login" placeholder="Enter username" />
+        <input
+          type="password"
+          id="password_login"
+          placeholder="Enter password"
+        />
+        <input style="border: 0%; background-color: rgb(235, 107, 17); color: white; font-weight: bold; font-size: 18px;" type="submit" />
+      </form>
+    </div>
+  </body>
+</html>
+<!-- <script type="module">
+  import navbar from "./components/navbar.js";
+
+  let cont = document.getElementById("cont");
+  cont.innerHTML = navbar();
+</script> -->
+
+<script>
+  async function Login(e) {
+    try {
+      e.preventDefault();
+      var login_data = {
+        username: document.getElementById("username_login").value,
+        password: document.getElementById("password_login").value,
+      };
+      login_data = JSON.stringify(login_data);
+
+      let login_url = `https://masai-api-mocker.herokuapp.com/auth/login`;
+
+      let response = await fetch(login_url, {
+        method: "POST",
+        body: login_data,
+
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      let data = await response.json();
+      console.log(data);
+      window.location.href="home.html"
+
+      let username = document.getElementById("username_login").value;
+
+      getuser(username, data.token);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async function getuser(username, token) {
+    let api = `https://masai-api-mocker.herokuapp.com/user/${username}`;
+
+    let response = await fetch(api, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    let data = await response.json();
+    console.log(data);
+  }
+</script>

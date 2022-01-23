@@ -1,0 +1,20 @@
+
+  input{
+      width: 300px;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 7px;
+      border: solid 1px goldenrod;
+      margin-left: 20%;
+      margin-right: 20%;
+      
+      
+
+  }
+  /* h1{
+   
+  } */
+
+  #sign{
+      text-align: center;
+  }

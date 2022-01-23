@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>browse products</title>
+    <script
+      src="https://kit.fontawesome.com/c48ffb925d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./browseProduct.css">
+    <link rel="stylesheet" href="./home.css">
+  </head>
+  <body>
+
+    <!-----------------navbar--------------------->
+    <div id="cont"></div>
+
+    <!-----------------return to homepage--------------------->
+    <div>
+        <nav id="returnTo"><a href="">Women</a>/<a href="">Dresses</a></nav>
+    </div>
+
+    <!-----------------product details--------------------->
+    <div id="prod_details">
+
+              <!-----------------product images--------------------->
+      <div id="prod_imgs"></div>
+
+
+           <!-----------------product size & price--------------------->
+      <div id="prod_price">
+        <h2 id="title"></h2>
+
+        <!-----------------price--------------------->
+        <div id="price&review" style="display: flex; justify-content: space-between;">
+          <div>
+            <div style="display: flex;">
+              <p id="discount_price"></p>
+              <p id="actual_price">$ 90.00</p>
+            </div>
+            <p class="shortText">Excluded From Promotions</p>
+          </div>
+          <img id="stars" src="./images/stars.png" alt="">
+        </div>
+        <div class="hr"></div>
+
+        <!-----------------colors--------------------->
+        <p><b style="font-family: sans-serif; display: flex;">Color:</b><p id="prod_color"></p></p>
+        <div id="colors">
+          <div style="border: 2px solid #00255a; border-radius: 50%; padding: 2px; width: 25px; height: 25px; margin-right: 10px;">
+            <div class="coloR" style="background-color: rgb(184, 176, 176); margin-top: 0px;"></div>
+          </div>
+          <div class="coloR" style="background-color: rgb(245, 190, 199);"></div>
+          <div class="coloR" style="background-color: rgb(89, 104, 65);"></div>
+          <div class="coloR" style="background-color: rgb(72, 76, 78);"></div>
+        </div>
+
+
+        <!-----------------size--------------------->
+        <div style="display: flex; margin-top: 14px;">
+          <p id="regular" class="rtp" onclick="viewSizes('regular')">REGULAR</p>
+          <p id="tall" class="rtp" onclick="viewSizes('tall')">TALL</p>
+          <p id="petite" class="rtp" onclick="viewSizes('petite')">PETITE</p>
+        </div>
+
+        <div id="sizeDiv" style="display: flex;">
+          <div id="xxs" class="sizeS" onclick="changeBack('xxs')">XXS</div>
+          <div id="xs" class="sizeS" onclick="changeBack('xs')">XS</div>
+          <div id="s" class="sizeS" onclick="changeBack('s')">S</div>
+          <div id="m" class="sizeS" onclick="changeBack('m')">M</div>
+          <div id="l" class="sizeS" onclick="changeBack('l')">L</div>
+          <div id="xl" class="sizeS" onclick="changeBack('xl')">XL</div>
+          <div id="xxl" class="sizeS" onclick="changeBack('xxl')">XXL</div>
+        </div>
+
+
+          <!-----------------size guide--------------------->
+        <div style="display: flex; justify-content: space-between;   font-family: Arial, Helvetica, sans-serif; margin-top: 16px;">
+          <img id="sizeClipArt" src="./images/sizeClipArt.png" alt="">
+          <div id="findMySize">
+            <p><b>T</b></p>
+            <p>Find My Size</p>
+          </div>
+          <p id="sizeGuide" style="font-size: 12px; color: rgb(54, 53, 53);">SIZE GUIDE</p>
+        </div>
+
+        <div class="hr"></div>
+
+        <!-----------------adress--------------------->
+        <div class="pickup">
+          <div class="select_circles"></div>
+          <div style="color: grey;">
+            Pickup - FREE
+            <p style="color: black; font-size: 11px;"><b>Select a store to check product availability</b></p>
+            <p style="font-size: 12px; color: #00255a;"><b>CHANGE STORE</b></p>
+          </div>
+        </div>
+        <div class="pickup">
+          <i class="fas fa-check-circle" style="width: 22px; height: 20px; color: #00255a; margin-right: 10px;"></i>
+          <div style="line-height: 20px;">Ship to an Adsress - FREE for Rewards Members ($50 min)</div>
+        </div>
+
+        <!-----------------Add to bag--------------------->
+        <div id="addBag">
+          <select name="" id="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <button onclick="addToBag()">ADD TO BAG</button>
+        </div>
+
+        <div style="width: 80%; margin: auto; font-size: 11px; font-family: sans-serif; color: grey;">
+          <p>4 interest-free payments of $10.25 with
+            <img id="paypal" src="./images/paypal.jpg" alt="paypal">
+            or
+            <img id="afterpay" src="./images/afterpay.jpg" alt="afterpay">
+          </p>
+        </div>
+        <p id="shipping_ret">SHIPPING & RETURN</p>
+
+        <p class="pff"><i class="fas fa-angle-left"></i>PRODUCT DETAILS</p>
+        <div class="hr"></div>
+        <p class="pff"><i class="fas fa-angle-left"></i>FABRIC & CARE</p>
+        <div class="hr"></div>
+        <p class="pff"><i class="fas fa-angle-left"></i>FIT & SIZING</p>
+
+      </div>
+    </div>
+
+    <!------------------CUSTOMERS ALSO VIEWED-------------------->
+    <div class="short-headings">
+      <div class="bar"></div>
+      <div>CUSTOMERS ALSO VIEWED</div>
+      <div class="bar"></div>
+    </div>
+    <div class="custView">
+      <div class="relatedImg">
+        <img class="imageShow" src="https://www.gap.com/webcontent/0020/687/945/cn20687945.jpg" alt="gap img">
+        <p class="shortText">Popover Dress</p>
+      </div>
+      <div class="relatedImg">
+        <img class="imageShow" src="https://www.gap.com/webcontent/0028/275/705/cn28275705.jpg" alt="gap img">
+        <p class="shortText">Lightweight V-Neck Sweater</p>
+      </div>
+      <div class="relatedImg">
+        <img class="imageShow" src="https://www.gap.com/webcontent/0027/246/019/cn27246019.jpg" alt="gap img">
+        <p class="shortText">Mockneck Sweatshirt Dress</p>
+      </div>
+      <div class="relatedImg">
+        <img class="imageShow" src="https://www.gap.com/webcontent/0028/258/212/cn28258212.jpg" alt="gap img">
+        <p class="shortText">Utility Pocket Dress</p>
+      </div>
+      <div class="relatedImg">
+        <img class="imageShow" src="https://www.gap.com/webcontent/0027/230/293/cn27230293.jpg" alt="gap img">
+        <p class="shortText">Tie-Waist Dress</p>
+      </div>
+      
+    </div>
+
+    <!------------------RECENTLY VIEWED AND RELATED ITEMS-------------------->
+
+    <div class="short-headings">
+      <div class="bar"></div>
+      <div>RECENTLY VIEWED AND RELATED ITEMS</div>
+      <div class="bar"></div>
+    </div>
+  </body>
+  <div class="custView">
+    <div class="relatedImg">
+      <img class="imageShow" src="https://www.gap.com/webcontent/0027/784/496/cn27784496.jpg" alt="gap img">
+      <p class="shortText">GapFit Eclipse High Rise Crossover Full Length Leggings</p>
+    </div>
+    <div class="relatedImg">
+      <img class="imageShow" src="https://www.gap.com/webcontent/0028/261/530/cn28261530.jpg" alt="gap img">
+      <p class="shortText">Eversoft Tunic Sweater</p>
+    </div>
+    <div class="relatedImg">
+      <img class="imageShow" src="https://www.gap.com/webcontent/0028/218/409/cn28218409.jpg" alt="gap img">
+      <p class="shortText">Tie-Waist Dress</p>
+    </div>
+    <div class="relatedImg">
+      <img class="imageShow" src="https://www.gap.com/webcontent/0025/719/013/cn25719013.jpg" alt="gap img">
+      <p class="shortText">Waffle-Knit Dress</p>
+    </div>
+    <div class="relatedImg">
+      <img class="imageShow" src="https://www.gap.com/webcontent/0027/220/650/cn27220650.jpg" alt="gap img">
+      <p class="shortText">Tie-Belt Print Dress</p>
+    </div>
+    
+  </div>
+
+  <!------------------ checkout popup -------------------->
+
+  <div class="popupMain" id="removePopup">
+    <div class="popup">
+      <div id="popupHead">
+        <p style="margin-top: 6px;">ADDED TO YOUR BAG</p>
+        <p id="crosS">
+          &#10006
+        </p>
+      </div>
+
+      <div>
+
+        <div class="content">
+          <img id="coImg" src="" alt="">
+          
+          <div style="flex: 8;padding-left: 10px;">
+            <div id="coDetail">
+              <p id="coTitle">title</p>
+              <div style="display: flex;">
+                <p id="coPrice">$90</p>
+                <p id="coPriceDiscounted">$50</p>
+              </div>
+            </div>
+            <div style="display: flex;">
+              <p class="coSizeQty">Size</p>
+              <p class="coSizeQty">S</p>
+            </div>
+            <div style="display: flex;">
+              <p class="coSizeQty">Qty</p>
+              <p class="coSizeQty">1</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="red">
+        <div class="icoN" style="background-color: rgb(206, 24, 17);">!</div>
+        <p>
+          Items on this site are unavailable to order or ship outside of North
+          America <span style="text-decoration-line: underline;">Find your regional site</span>
+        </p>
+      </div>
+      <div id="blue"><div>
+        <div class="icoN" style="background-color: rgb(92, 171, 247)">i</div>
+        
+          Some of our most popular items can only be saved in your bag for 2
+          hours.
+        </p></div>
+      </div>
+
+      <div class="short-headings" style="margin-top: 25px;">
+        <div class="bar"></div>
+        <div style="font-size: 12px; width: 420px;">CUSTOMERS ALSO BOUGHT</div>
+        <div class="bar"></div>
+      </div>
+      <div class="custView" style="gap:10px; padding: 0px 25px;">
+        <div>
+          <img style="height: 110px;" src="https://www.gap.com/webcontent/0027/784/496/cn27784496.jpg" alt="gap img">
+        </div>
+        <div>
+          <img style="height: 110px;" src="https://www.gap.com/webcontent/0028/261/530/cn28261530.jpg" alt="gap img">
+        </div>
+        <div>
+          <img style="height: 110px;" src="https://www.gap.com/webcontent/0028/218/409/cn28218409.jpg" alt="gap img">
+        </div>
+        <div>
+          <img style="height: 110px;" src="https://www.gap.com/webcontent/0027/230/282/cn27230282.jpg" alt="gap img">
+        </div>
+        <div>
+          <img style="height: 110px;" src="https://www.gap.com/webcontent/0019/896/460/cn19896460.jpg" alt="gap img">
+        </div>
+        
+      </div>
+      <div class="hr"></div>
+
+      <div id="coQty_total">
+        <p><span id="cartQty"></span> items in bag</p>
+        <p>Subtotal <span id="totalAmt"></span></p>
+      </div>
+
+      <div id="coButton">
+        <button id="keepShopBtn">KEEP SHOPPING</button>
+        <button id="coBtn"> CHECKOUT</button>
+      </div>
+      
+    
+    </div>
+  </div>
+  <div id="foot"></div>
+
+
+
+</html>
+
+
+<script type="module">
+  import navbar from "./components/navbar.js";
+  let cont = document.getElementById("cont");
+  cont.innerHTML = navbar();
+
+  import footer from "./components/footer.js";
+  document.getElementById("foot").innerHTML = footer();
+
+
+
+</script>
+<script src= "./browseProduct.js">
+
+
+</script>
+
+

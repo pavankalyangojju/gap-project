@@ -1,0 +1,51 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
+
+#container{
+    margin-top: 0px;
+    display: flex;
+    
+}
+#main{
+    display: flex;
+    justify-content: space-between;
+}
+
+#right{
+
+    width:80%;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:10px;
+    
+}
+
+.proImG{
+    /* width:230px; */
+    height:370px;
+}
+#left{
+    width:20%;
+    margin-left: 60px;
+}
+#right>div{
+    margin-bottom: 10px;
+}
+h3{
+    color:brown;
+    font-size: 13px;
+}
+#left>h3{
+    color:darkblue;
+    font-size: 16px;
+}
+h2{
+    text-align: center;
+}
+
+.brand{
+    font-size: 15px;;
+    color: rgb(107, 107, 107);
+}

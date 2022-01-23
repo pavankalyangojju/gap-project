@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>gap product</title>
+    <link rel="stylesheet" href="./Products.css">
+    <link rel="stylesheet" href="./home.css">
+    
+</head>
+<body>
+
+    <!--Navbar div-->
+    <div id="cont"></div>
+
+    <h1 style="text-align: center; ">DRESSES</h1>
+
+
+        <div id="main">
+            <div><p>Womens / Dresses</p><br></div>
+            <div>
+                
+            <select id="select" onchange = "price()">
+                <option value="" >Sort By</option>
+                <option value="low">low-high</option>
+                <option value="high">high-low</option>
+            </select>
+            </div>
+        
+    </div>
+    <div id = "container">
+        <div id ="left">
+           
+            <h3>Just Arrived</h3>
+            <p>New Arrivals</p>
+            <p>The Gap Collective</p>
+            <p>Artist Tees</p>
+            <p>The Matching Sets Shop</p>
+            <p>Responsibly-Made Shop</p>
+
+            <h3>Deals</h3>
+            <h4>Sale - Additional 50% off</h4>
+           
+                <h3>Categories</h3>
+                <p>Shop All Styles</p>
+                <p>Jeans</p>
+            
+           <h3>Dresses</h3>
+           <p>Jumpsuits & Rompers</p>
+           <p>T-Shirts</p>
+           <p>Shirts & Tops</p>
+           <p>Hoodies</p>
+           <p>Sweatshirts & Sweatpants</p>
+           <p>Sweaters</p>
+           <p>Outerwear & Jackets</p>
+           <p>Pants & Leggings</p>
+           <p>Joggers</p>
+           <p>Shorts</p>
+           <p>Skirts</p>
+           <p>Swim</p>
+           <p>Shoes & Accessories</p>
+
+           <h3>Active wear</h3>
+           <p>Shop All Styles</p>
+           <p>Sports Bras</p>
+           <p>Tops</p>
+           <p>Sweatshirts & Jackets</p>
+           <p>Leggings & Joggers</p>
+           <p>Shorts</p>
+           <p>Accessories</p>
+
+           <h3>GapBody</h3>
+           <p>Shop all styles</p>
+           <p>Bras</p>
+           <p>Undies</p>
+           <p>Pajamas & Loungewear</p>
+
+           <h3>More Sizes</h3>
+           <p>The Petite Shop</p>
+           <p>The Tall Shop</p>
+           <p>Maternity</p>
+
+           <h3>Featured Shops</h3>
+           <p>GapFit Shop by Activity</p>
+           <p>The Logo Shop</p>
+           <p>Matching For All</p>
+           <p>Teen Collection</p>
+
+
+        </div>
+        
+        <div id = "right"></div>
+    </div>
+
+    <div id="foot"></div>
+</body>
+</html>
+<script type="module">
+    import navbar from "./components/navbar.js";
+    let cont = document.getElementById("cont");
+    cont.innerHTML = navbar();
+
+    import footer from "./components/footer.js";
+    document.getElementById("foot").innerHTML = footer();
+  
+
+
+</script>
+<script>
+
+
+
+var products_data = [
+    {
+        "name": "Utility popover dress",
+        "price": "$59.95",
+        "image": "https://www.gap.com/webcontent/0028/368/330/cn28368330.jpg",
+        "image1": "https://www.gap.com/webcontent/0028/365/519/cn28365519.jpg",
+        "image2": "https://www.gap.com/webcontent/0028/475/061/cn28475061.jpg",
+        "image3": "https://www.gap.com/webcontent/0028/474/383/cn28474383.jpg",
+        "color": "moonstone",
+        "brand": "Excluded From Promotions"
+    },
+    {
+        "name": "Flannel Tiered Shirtdress",
+        "price": "$69.95",
+        "image": "https://www.gap.com/webcontent/0028/174/100/cn28174100.jpg",
+        "image1": "https://www.gap.com/webcontent/0028/174/114/cn28174114.jpg",
+        "image2": "https://www.gap.com/webcontent/0027/925/837/cn27925837.jpg",
+        "image3": "https://www.gap.com/webcontent/0027/925/896/cn27925896.jpg",
+        "color": "heather grey",
+        "brand": "Extra 40% Off With Code MORE"
+    },
+    {
+        "name": "Slouchy Overalls With Washwell",
+        "price": "$79.95",
+        "image": "https://www.gap.com/webcontent/0027/232/072/cn27232072.jpg",
+        "image1": "https://www.gap.com/webcontent/0027/232/069/cn27232069.jpg",
+        "image2": "https://www.gap.com/webcontent/0027/232/113/cn27232113.jpg",
+        "image3": "https://www.gap.com/webcontent/0027/312/219/cn27312219.jpg",
+        "color": "washed black",
+        "brand": "Extra 40% Off With Code MORE"
+    },
+    {
+        "name": "Sleeveless Tiered Ruffle Midi Dress",
+        "price": "$38.99",
+        "image": "https://www.gap.com/webcontent/0020/564/243/cn20564243.jpg",
+        "image1": "https://www.gap.com/webcontent/0020/498/461/cn20498461.jpg",
+        "image2": "https://www.gap.com/webcontent/0020/498/412/cn20498412.jpg",
+        "image3": "https://www.gap.com/webcontent/0020/474/044/cn20474044.jpg",
+        "color": "papaya orange",
+        "brand": "Extra 50% Off With Code GREAT"
+    },
+    {
+        "name": "Henley Dress",
+        "price": "$59.99",
+        "image": "https://www.gap.com/webcontent/0027/643/756/cn27643756.jpg",
+        "image1": "https://www.gap.com/webcontent/0027/929/941/cn27929941.jpg",
+        "image2": "https://www.gap.com/webcontent/0027/708/647/cn27708647.jpg",
+        "image3": "https://www.gap.com/webcontent/0027/929/967/cn27929967.jpg",
+        "color": "jelly bean pink",
+        "brand": "Extra 50% Off With Code GREAT"
+    },
+    {
+        "name": "Modern Squareneck Dress",
+        "price": "$49.99",
+        "image": "https://www.gap.com/webcontent/0019/708/865/cn19708865.jpg",
+        "image1": "https://www.gap.com/webcontent/0019/767/789/cn19767789.jpg",
+        "image2": "https://www.gap.com/webcontent/0019/767/806/cn19767806.jpg",
+        "image3": "https://www.gap.com/webcontent/0019/767/814/cn19767814.jpg",
+        "color": "navy blue & white stripe",
+        "brand": "Extra 50% Off With Code GREAT"
+    },
+    {
+        "name": "Ruffle Cami Dress",
+        "price": "$34.97",
+        "image": "https://www.gap.com/webcontent/0019/898/376/cn19898376.jpg",
+        "image1": "https://www.gap.com/webcontent/0020/041/531/cn20041531.jpg",
+        "image2": "https://www.gap.com/webcontent/0020/041/538/cn20041538.jpg",
+        "image3": "https://www.gap.com/webcontent/0020/041/548/cn20041548.jpg",
+        "color": "apple blossom pink",
+        "brand": "Extra 50% Off With Code GREAT"
+    },
+    {
+        "name": "Wrap-Front Midi Dress",
+        "price": "$49.99",
+        "image": "https://www.gap.com/webcontent/0019/796/897/cn19796897.jpg",
+        "image1": "https://www.gap.com/webcontent/0019/832/709/cn19832709.jpg",
+        "image2": "https://www.gap.com/webcontent/0019/832/740/cn19832740.jpg",
+        "image3": "https://www.gap.com/webcontent/0019/832/713/cn19832713.jpg",
+        "color": "rose bush pink",
+        "brand": " Extra 50% Off With Code GREAT"
+    },
+    {
+        "name": "Tie-Strap Cami Midi Dress",
+        "price": "$49.99",
+        "image": "https://www.gap.com/webcontent/0020/352/219/cn20352219.jpg",
+        "image1": "https://www.gap.com/webcontent/0020/352/219/cn20352219.jpg",
+        "image2": "https://www.gap.com/webcontent/0020/352/219/cn20352219.jpg",
+        "image3": "https://www.gap.com/webcontent/0020/352/219/cn20352219.jpg",
+        "color": "light brown tie dye",
+        "brand": "Extra 50% Off With Code GREAT"
+    },
+    {
+        "name": "Three-Quarter Sleeve Tiered Maxi Dress",
+        "price": "$64.99",
+        "image": "https://www.gap.com/webcontent/0020/377/343/cn20377343.jpg",
+        "image1": "https://www.gap.com/webcontent/0020/377/343/cn20377343.jpg",
+        "image2": "https://www.gap.com/webcontent/0020/377/343/cn20377343.jpg",
+        "image3": "https://www.gap.com/webcontent/0020/377/343/cn20377343.jpg",
+        "color": "yellow tie dye",
+        "brand": "Extra 50% Off With Code GREAT"
+    },
+    {
+        "name": "Button-Front Tiered Dress",
+        "price": "$39.99",
+        "image": "https://www.gap.com/webcontent/0020/327/991/cn20327991.jpg",
+        "image1": "https://www.gap.com/webcontent/0020/327/991/cn20327991.jpg",
+        "image2": "https://www.gap.com/webcontent/0020/327/991/cn20327991.jpg",
+        "image3": "https://www.gap.com/webcontent/0020/327/991/cn20327991.jpg",
+        "color": "navy blue print",
+        "brand": "Extra 50% Off With Code GREAT"
+    },
+    {
+        "name": "Waffle-Knit Dress",
+        "price": "$47.99",
+        "image": "https://www.gap.com/webcontent/0025/719/013/cn25719013.jpg",
+        "image1": "https://www.gap.com/webcontent/0027/690/832/cn27690832.jpg",
+        "image2": "https://www.gap.com/webcontent/0021/973/704/cn21973704.jpg",
+        "image3": "https://www.gap.com/webcontent/0028/092/758/cn28092758.jpg",
+        "color": "navy blue print",
+        "brand": "Extra 50% Off With Code GREAT"
+    },
+
+]
+    // var arr = JSON.parse(localStorage.getItem("Gap_product"));
+      display(products_data);
+    function display(arr){
+        document.getElementById("right").textContent = "";
+        arr.map((elem)=>{
+     
+        let div = document.createElement("div")
+        div.addEventListener("click", ()=>{
+
+            single(elem)
+            window.location.href = "./browseProducts.html";
+
+    })
+
+let img = document.createElement("img")
+img.src = elem.image;
+img.setAttribute("class", "proImG")
+
+let name = document.createElement("p")
+name.textContent = elem.name;
+
+let price = document.createElement("h3")
+price.textContent = elem.price
+
+let brand = document.createElement("p")
+brand.textContent = elem.brand
+brand.setAttribute("class", "brand")
+
+div.append(img, name, price, brand)
+
+document.getElementById("right").append(div);
+
+        })
+    }
+    function price(){
+                   var value = document.querySelector("#select").value;
+                   if(value=="low"){
+                    products_data.sort(function(a,b){
+                           return Number(a.price.slice(1,6)) - Number(b.price.slice(1,6))
+                       })
+                   }else if(value=="high"){
+                    products_data.sort(function(a,b){
+                            return Number(b.price.slice(1,6)) - Number(a.price.slice(1,6))
+
+                           })
+
+                       }
+                   
+                  display(products_data)
+
+                  
+               }  
+    function  single(elem){
+        
+
+        localStorage.setItem("single_product",JSON.stringify(elem));
+    }
+               
+    
+</script>
