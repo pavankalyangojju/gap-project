@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navbar{
+            /* border: 1px solid red; */
+            background-color: rgb(51,51,51);
+            width: 100%;
+            height: 60px;
+        }
+        #navbar > div > button >img{
+            width: 70%;
+            height: 50px;
+            background: black;
+            /* margin-left: 50px; */
+        }
+        button{
+            background-color: black;
+        }
+        #nav{
+            margin-left: 150px;
+        }
+        #banana{
+            width: 200px;
+        }
+        h6{
+            margin-left: 900px;
+            transform: translateY(-60px);
+            color: white;
+            font-size: 12px;
+        }
+        .gaps:hover{
+            cursor: pointer;
+
+        }
+        a{
+            color: white;
+        }
+        #signin{
+            margin-left: 1509px;
+            transform: translateY(-115px);
+            /* color: white; */
+        }
+        #signin > button > div{
+            color: white;
+        }
+        #signin > button > div{
+            background-color: black;
+            /* color: white; */
+        }
+        #signin > button:hover{
+            cursor: pointer;
+            background-color: white;
+        }
+        #sigh-up {
+            border: 1px solid red;
+            height: 50px;
+            width: 100%;
+            position: absolute;
+            display: none;
+        }
+        #gapsign{
+            border: 1px solid red;
+            color: white;
+        }
+        #btncolor{
+            color: white;
+            background-color: blue;
+            margin-top: 10px;
+            width: 150px;
+        }
+        #bag{
+            width: 10%;
+            height: 10%;
+            background-color: white;
+            transform: translateX(130px);
+            transform: translateY(-30px);
+            margin-left: 130px;
+        }
+        
+    </style> 
+</head>
+<body>
+    <div id="navbar">
+        <div id="nav">
+            <button class="gaps">
+                <img src="data:image/png;base64,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" alt="">
+            </button>
+            <button id="old" class="gaps">
+                <img src="https://png.pngitem.com/pimgs/s/630-6301895_west-edmonton-mall-gap-inc-hd-png-download.png" alt="">
+            </button>
+            <button id="banana" class="gaps">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD-c4m0A4kucfADV87tRk4vqyq0f-18gj8ym4wfdDdh-RaFGWT04fNK4-CANPiijy5Sn4&usqp=CAU" alt="">
+            </button>
+            <button id="athleta" class="gaps">
+                <img src="https://images.milledcdn.com/2021-02-13/ZKEiGs0RPqo4jp9M/wpYq-bqMeXEK.jpeg" alt="">
+            </button>
+        </div>
+        <h6>FREE SHIPPING ON $50+ FOR REWARDS MEMBERS <a href="#">SIGN IN OR JOIN</a> <a href="#">DETAILS</a> </h6>
+        <div id="signin">
+            <button onclick="drop()">
+                <div>Sign In</div>
+                <div>Your Account &#x25BF</div>
+                <div id="sign-up">
+                    <!-- <a href="https://secure-www.gap.com/my-account/sign-in"></a> -->
+                    <!-- <button id="gapsign">SIGN IN</button> -->
+                </div>
+
+                
+            </button>
+            <div>
+                <img id="bag" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_334009.png&f=1&nofb=1" alt="">
+            </div>
+
+        </div>
+
+        
+
+    </div>
+</body>
+</html>
+<script>
+    let d = document.getElementById("sign-up");
+    function drop() {
+    d.innerHTML = ""
+       
+      d.style.display = "block";
+      let btn = document.createElement("button")
+      btn.innerHTML = "SIGN IN" 
+      window.location = "clicksigin.html"
+      btn.id = "btncolor";
+      let text = document.createElement("p")
+      text.innerHTML = "Get free shipping on all \norders $50+, earn points, \nand more! It’s free!"
+
+      let text1 = document.createElement("p")
+      text1.innerHTML = "Join Gap Good Rewards"
+      let text2 = document.createElement("p")
+      text2.innerHTML = "Orders & Returns"
+    
+      let text3 = document.createElement("p")
+      text3.innerHTML = "My Points and Rewards"
+      let text4 = document.createElement("p")
+      text4.innerHTML = "Check Gift Card Balances"
+
+      let text5 = document.createElement("p")
+      text5.innerHTML = "International Shipping"
+
+
+
+
+
+      d.append(btn,text,text2,text3,text4,text5)
+      
+    }
+
+  </script>
