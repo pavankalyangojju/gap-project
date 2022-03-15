@@ -1,0 +1,119 @@
+#container {
+    /* width: 100%; */
+    height: auto;
+    border: 1px solid black;
+    display: flex;
+    gap: 5%;
+    padding: 10px 8%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(236, 236, 236);
+  }
+  .center {
+    text-align: center;
+  }
+  #left {
+    border: 1px solid transparent;
+    height: auto;
+    margin-top: 20px;
+    width: 60%;
+  }
+  #right {
+    border: 1px solid transparent;
+    height: auto;
+    width: 33%;
+    margin-top: 15px;
+  }
+  .select {
+    display: flex;
+  }
+  #shippingMethod {
+    width: 96%;
+    padding: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  .checkbox {
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .font {
+    font-size: 14px;
+    color: grey;
+  }
+  .day {
+    line-height: 0;
+    width: 90%;
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  #orderSummary {
+    background-color: white;
+    width: 26%;
+    position: fixed;
+    padding: 10px 10px 0 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  #address {
+    margin-top: 20px;
+    width: 96%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px;
+  }
+  #address > input {
+    width: 95%;
+    height: 20px;
+    margin-top: 20px;
+    border: 0;
+    border-bottom: 0.5px solid grey;
+  }
+  
+  #address > input:focus {
+    outline-offset: 0px;
+    outline: none;
+  }
+  #continue {
+    width: 180px;
+    padding: 14px 10px;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    font-weight: bold;
+    border: 0;
+    margin: 20px 20px 20px 66%;
+  }
+  #payment {
+    margin-top: 20px;
+    width: 96%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px;
+  }
+  #otp,
+  #pay > div > input {
+    width: 95%;
+    height: 20px;
+    margin-top: 20px;
+    border: 0;
+    border-bottom: 0.5px solid grey;
+    margin-left: 20px;
+  }
+  #otp,
+  #pay > div > input:focus {
+    outline-offset: 0px;
+    outline: none;
+  }
+  #pay > button {
+    width: 400px;
+    height: 40px;
+    padding: 0 10px;
+    background-color: white;
+    margin: 15px 12%;
+  }
+  #pay > button:hover {
+    cursor: pointer;
+  }
+  
