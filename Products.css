@@ -1,4 +1,13 @@
+
+ 
+   
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
+
 #container{
+    margin-top: 0px;
     display: flex;
     
 }
@@ -12,13 +21,13 @@
     width:80%;
     display:grid;
     grid-template-columns: repeat(4,1fr);
-    margin-right: 50px;
+    grid-gap:10px;
     
 }
 
-img{
-    width:230px;
-    height:310px;
+.proImG{
+    /* width:230px; */
+    height:370px;
 }
 #left{
     width:20%;
@@ -29,10 +38,17 @@ img{
 }
 h3{
     color:brown;
+    font-size: 13px;
 }
 #left>h3{
     color:darkblue;
+    font-size: 16px;
 }
 h2{
     text-align: center;
+}
+
+.brand{
+    font-size: 15px;;
+    color: rgb(107, 107, 107);
 }

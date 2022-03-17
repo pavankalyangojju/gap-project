@@ -1,0 +1,603 @@
+body{
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Navbar*/
+#nav {
+  height: 50px;
+  /*border: solid 1px red;*/
+
+  display: grid;
+  grid-template-columns: repeat(5, 5% 35% 40% 10% 5%);
+  grid-gap: 10px;
+  padding-left: 5%;
+  background-color: rgb(17, 16, 16);
+}
+#nav > div {
+  border: 1px solid transparent;
+}
+#nav > div:nth-child(2) {
+  margin-top: 10px;
+}
+
+#nav > div > a {
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bolder;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  margin: 5px;
+  color: white;
+}
+
+#nav > div > button {
+  width: 90px;
+  padding: 8px;
+  font-weight: bolder;
+
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
+#nav > div:nth-child(3) {
+  margin-top: 10px;
+}
+
+#nav > div > span {
+  color: white;
+  font-size: 0.8em;
+  font-weight: bolder;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+#nav > div > span > a {
+  color: white;
+  margin: 2px;
+  font-weight: bolder;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+#nav > div:nth-child(4) {
+  margin-top: 10px;
+}
+#nav > div > select {
+  background-color: transparent;
+  color: white;
+  font-weight: bolder;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  border: 0;
+  font-size: 1em;
+}
+#nav > div:nth-child(5) {
+  margin-top: 10px;
+  border-left: 2px solid white;
+}
+
+/*Middle part*/
+#middle {
+  /* border: 1px solid red;*/
+  /* border-top: 1px solid black; */
+  height: 110px;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 8% 75% 16%);
+}
+#middle > div {
+  border: solid 1px transparent;
+}
+#middle > div:nth-child(2) {
+  margin-top: 50px;
+}
+#middle > div > a {
+  text-decoration: none;
+  margin: 15px;
+  font-size: 1em;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  color: navy;
+}
+#middle > div > a:hover {
+  text-decoration: underline;
+}
+
+#middle > div:nth-child(3) > a {
+  font-size: 0.6em;
+  color: navy;
+  font-weight: bolder;
+}
+#middle > div > input {
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  border: 0;
+  border-bottom: 1px solid rgb(44, 44, 44);
+}
+#middle > div > input::placeholder {
+  font-size: 1.2em;
+  color: navy;
+}
+
+#extra {
+  height: 200px;
+  /*border: 1px solid red;*/
+  background-image: url("https://media.istockphoto.com/photos/pink-purple-and-navy-blue-defocused-blurred-motion-gradient-abstract-picture-id1152472627?b=1&k=20&m=1152472627&s=170667a&w=0&h=vvWQ2EEU9VAh92XU0Mcr1GEAes0w_CeCJ3FKwsgqozY=");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 50%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#extra > div:nth-child(1) {
+  /* border: 1px solid black;*/
+  margin-top: 20px;
+}
+#inner > div:nth-child(1) > h1 {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  font-weight: bolder;
+  font-size: 2em;
+}
+#inner > div:nth-child(1) > h2 {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+#inner > div:nth-child(2) > h1 {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+#inner > div:nth-child(2) > h2 {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+#inner > div:nth-child(3) > h1 {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+#inner > div:nth-child(3) > h2 {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+#extra > div:nth-child(2) {
+  /*border: solid 1px black;*/
+  margin-top: 30px;
+}
+#extra > div:nth-child(2) > button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  margin: 10px;
+  padding: 8px;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+#extra > div:nth-child(2) > button:hover {
+  background-color: navy;
+}
+#extra > div:nth-child(2) > span {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+
+#inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 90%;
+  margin: 5px;
+}
+#inner > div {
+  border: 1px solid transparent;
+}
+#inner > div:nth-child(2) {
+  border-left: 3px solid white;
+}
+#inner > div:nth-child(3) {
+  border-left: 3px solid white;
+}
+#outer {
+  height: 600px;
+  /*border: 1px solid rgb(8, 8, 8);*/
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#outer > div {
+  border: 1px solid transparent;
+}
+
+.ipo{
+  height: 100%;
+  width: 100%;
+}
+/* #outer > div:nth-child(1) {
+  background-image: url("https://static.onecms.io/wp-content/uploads/sites/13/2018/03/20/coedition.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+#outer > div:nth-child(2) {
+  background-image: url("https://insideretail.asia/wp-content/uploads/2020/11/Gap.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#outer > div:nth-child(1) > h1 {
+  margin-left: 500px;
+  margin-top: 250px;
+  font-size: 2em;
+  color: navy;
+}
+.outerimg {
+  margin-left: 280px;
+}
+
+#five {
+  height: 350px;
+  /* border: solid 1px black;*/
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+#five > div {
+  /*border: 1px solid red;*/
+  margin: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#five > div > a {
+  text-decoration: none;
+  color: navy;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  margin: 5px;
+  font-size: 0.8em;
+}
+#p {
+  color: navy;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  margin: 5px;
+  font-size: 1em;
+}
+#next {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 650px;
+  /* border: 1px solid red;*/
+  margin: 70px;
+}
+#next > div {
+  /*border: 1px solid black;*/
+  margin: 10px;
+}
+
+#button {
+  /*border: 1px solid red;*/
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px;
+}
+#button > div {
+  border: 1px solid transparent;
+}
+#button > div > h1 {
+  color: rgb(3, 3, 68);
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+#button > div > button {
+  width: 300px;
+  padding: 10px;
+  background-color: white;
+  color: navy;
+  margin-left: 60px;
+  margin-top: 20px;
+  border: 1px solid navy;
+}
+#button > div > button:hover {
+  background-color: rgb(2, 2, 51);
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+#button > div > h2 {
+  color: rgb(3, 3, 68);
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+#pl {
+  color: navy;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  margin: 10px;
+  font-size: 1em;
+}
+#king {
+  display: grid;
+  /*border: 1px solid red;*/
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 700px;
+  margin-top: 70px;
+  background-image: url("https://img2.chinadaily.com.cn/images/201803/03/5a99f595a3106e7d2d7508ba.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#four {
+  display: grid;
+  grid-template-columns: repeat(3, 35% 25% 20%);
+  grid-template-rows: 70px;
+  /* border: 1px solid red;*/
+  justify-content: space-between;
+  padding-left: 5%;
+}
+#four > div {
+  /*border: 1px solid black;*/
+  margin: 5px;
+}
+#four > div > h2 {
+  color: rgb(3, 3, 68);
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+#four > div > p {
+  color: rgb(3, 3, 68);
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+  font-size: 0.8em;
+  margin-top: 20px;
+}
+#four > div > button {
+  width: 180px;
+  padding: 10px;
+  background-color: white;
+  color: navy;
+  border: 1px solid navy;
+}
+#four > div > button:hover {
+  background-color: rgb(2, 2, 51);
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+#four > div:nth-child(3) {
+  margin-left: 350px;
+}
+#gap {
+  height: 450px;
+  /*border: 1px solid red;*/
+  background-image: url("https://i.pinimg.com/originals/0a/25/18/0a2518f4270f4ecb117eaaf6a05abcb7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#gap > select {
+  margin-left: 680px;
+  width: 150px;
+  padding: 12px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+#teen{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 500px;
+    /*border: 1px solid red;*/
+    margin: 15px;
+}
+#teen>div{
+    border: 0;
+}
+#teen>div:nth-child(1){
+    background-image: url("https://www.gap.com/Asset_Archive/GPWeb/content/0028/031/299/Assets/VDN/VDN_New_Arrivals.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#teen>div:nth-child(2){
+    background-image: url("https://www.gap.com/Asset_Archive/GPWeb/content/0028/031/299/Assets/VDN/VDN_Women.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#teen>div:nth-child(3){
+    background-image: url("https://www.gap.com/Asset_Archive/GPWeb/content/0028/031/299/Assets/VDN/VDN_Maternity.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#teen>div:nth-child(4){
+    background-image: url("https://www.gap.com/Asset_Archive/GPWeb/content/0028/031/299/Assets/VDN/VDN_Men.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#teen>div>h2{
+    color: white;
+    margin-left: 70px;
+    margin-top: 250px;
+}
+
+
+#qteen{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 500px;
+    /*border: 1px solid red;*/
+    /*margin: 15px;*/
+    margin: 0;
+}
+#qteen>div{
+    border: 0;
+}
+#qteen>div:nth-child(1){
+    background-image: url("https://www.gap.com/Asset_Archive/GPWeb/content/0028/031/299/Assets/VDN/VDN_TeenGirls.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#qteen>div:nth-child(2){
+    background-image: url("https://www.gap.com/Asset_Archive/GPWeb/content/0028/031/299/Assets/VDN/VDN_TeenGuy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#qteen>div:nth-child(3){
+    background-image: url("https://www.gap.com/Asset_Archive/GPWeb/content/0028/031/299/Assets/VDN/VDN_Girls.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#qteen>div:nth-child(4){
+    background-image: url("https://www.gap.com/Asset_Archive/GPWeb/content/0028/031/299/Assets/VDN/VDN_Boys.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#qteen>div>h2{
+    color: white;
+    margin-left: 70px;
+    margin-top: 250px;
+}
+
+
+#qbteen{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 500px;
+    /*border: 1px solid red;*/
+    /*margin: 15px;*/
+    margin: 0;
+}
+#qbteen>div{
+    border: 0;
+}
+#qbteen>div:nth-child(1){
+    background-image: url("https://www.gap.com/Asset_Archive/GPWeb/content/0028/031/299/Assets/VDN/VDN_ToddlerGirl.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#qbteen>div:nth-child(2){
+    background-image: url("https://www.gap.com/Asset_Archive/GPWeb/content/0028/031/299/Assets/VDN/VDN_ToddlerBoy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#qbteen>div:nth-child(3){
+    background-image: url("https://www.gap.com/Asset_Archive/GPWeb/content/0028/031/299/Assets/VDN/VDN_BabyGirl.jpg?v=2");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#qbteen>div:nth-child(4){
+    background-image: url("https://www.gap.com/Asset_Archive/GPWeb/content/0028/031/299/Assets/VDN/VDN_BabyBoy.jpg?v=2");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#qbteen>div>h2{
+    color: white;
+    margin-left: 70px;
+    margin-top: 250px;
+}
+
+#bot{
+    display: grid;
+    grid-template-rows: 150px;
+    margin: 10px;
+    /* border-bottom: 1px solid navy;
+    border-top: 1px solid navy; */
+    /*border: 1px solid black;*/
+
+}
+#boot{
+    display: grid;
+    grid-template-columns: repeat(1,100%);
+    
+    /*border: 1px solid black;*/
+}
+#boot>div{
+    border: 1px solid transparent;
+}
+
+#mail{
+    
+    /*border: 1px solid blue;*/
+    display: grid;
+    /* grid-template-rows: 100px; */
+    grid-template-columns: repeat(2,1fr);
+    background-color: rgb(1, 1, 49);
+    padding: 30px 120px;
+    margin-top: 150px;
+  
+}
+#mail>div{
+    border: 1px solid transparent;
+}
+#mail>div>h1{
+    margin-left: 50px;
+    margin-top: 35px;
+    color: white;
+}
+#mail>div>input{
+    background-color: transparent;
+    color: white;
+    border: 0;
+    border-bottom: 1px solid white;
+    margin-left: 50px;
+    margin-top: 30px;
+    width: 300px;
+}
+#mail>div>p{
+    color: white;
+    font-size: 0.7em;
+    margin-left: 50px;
+}
+#mail>div>span>button{
+    border: 1px solid white;
+    width: 70px;
+    padding: 7px;
+    color: white;
+    background-color: transparent;
+    
+}
+#oi{
+    height: 50px;
+    border-bottom:1px solid navy; 
+    margin: 10px;
+}
+#oi>p{
+    margin-left: 70px;
+    font-size: 1.5em;
+    color: rgb(2, 2, 59);
+    /* font-weight: bolder; */
+
+}
+#op{
+    height: 50px;
+    border-bottom:1px solid navy; 
+    margin: 10px;
+}
+#op>p{
+    margin-left: 70px;
+    font-size: 1.5em;
+    color: rgb(2, 2, 59);
+    /* font-weight: bolder; */
+
+}
+#op>p>span>a{
+    color: rgb(2, 2, 59);
+}
+/*--FOOTER--*/
+#footer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 320px;
+    border-bottom: 2px solid rgb(1, 1, 51);
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: 300;
+}
+#footer>div{
+    /*border: 1px solid red;*/
+    margin: 5px;
+
+}
+#footer>div>h2{
+    color: rgb(2, 2, 88);
+    font-size: 1.2em;
+    font-weight: bolder;
+    font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+    margin-left: 20px;
+}
+#footer>div>a{
+    color: rgb(2, 2, 88);
+    font-size: 1em;
+    font-weight: bolder;
+    font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+    margin-left: 20px;
+    text-decoration: none;
+}
+#pu{
+    margin-left: 320px;
+    color: rgb(2, 2, 48);
+}
+#pe{
+    margin-left: 550px;
+    color: rgb(2, 2, 48);
+}

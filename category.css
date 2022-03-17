@@ -1,0 +1,166 @@
+*{
+    font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;;
+}
+.main{
+    width: 95%;
+    margin:0px auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.main>div:hover{
+    /* transform: translateY(20px); */
+    cursor: pointer;
+}
+.imgdiv1{
+    height: 450px;
+    background-image: url(./images/VDN_women_newarrivals.webp);
+    background-size: cover;
+}
+.imagEdiV:hover{
+    opacity: 0.85;
+}
+.imgdiv2{
+    height: 450px;
+    background-image: url(./images/VDN_women_jeans.webp);
+    background-size: cover;
+}
+.imgdiv3{
+    height: 450px;
+    background-image: url(./images/VDN_women_pants.jpg);
+    background-size: cover;
+}
+.imgdiv4{
+    height: 450px;
+    background-image: url(./images/VDN_women_sweats.webp);
+    background-size: cover;
+}
+.imgdiv5{
+    height: 450px;
+    background-image: url(./images/VDN_women_sweaters.webp);
+    background-size: cover;
+}
+.imgdiv6{
+    height: 450px;
+    background-image: url(./images/VDN_women_outerwear.webp);
+    background-size: cover;
+}
+.imgdiv7{
+    height: 450px;
+    background-image: url(./images/VDN_women_dresses.webp);
+    background-size: cover;
+}
+.imgdiv8{
+    height: 450px;
+    background-image: url(./images/VDN_womens_shirtsandtops.webp);
+    background-size: cover;
+}
+.imgdiv9{
+    height: 450px;
+    background-image: url(./images/VDN_women_tees.jpg);
+    background-size: cover;
+}
+.imgdiva{
+    height: 450px;
+    background-image: url(./images/VDN_women_gapfit.webp);
+    background-size: cover;
+}
+.imgdivb{
+    height: 450px;
+    background-image: url(./images/VDN_women_gapbody.webp);
+    background-size: cover;
+}
+.imgdivc{
+    height: 450px;
+    background-image: url(./images/VDN_women_accessories.webp);
+    background-size: cover;
+}
+#name{
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+#name >a:hover{
+    color: rgb(30, 30, 100);
+}
+#name >a{
+    color: white;
+    text-decoration: unset;
+    font-size: 13px;
+    font-weight: bold;
+}
+/* navigation div */
+
+.navigation{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    /* border: 1px solid black; */
+    margin-bottom: 30px;
+}
+.all_tags{
+    display: flex;
+    width: 60%;
+    /* border: 1px solid black; */
+    margin:auto;
+    text-align: center;
+}
+.single_tag{
+    width: auto;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+.single_tag p{
+    font-size: 11px;
+    font-weight: 400;
+    color: #122344;
+    padding:0px 15px;
+    text-transform: uppercase;
+}
+
+/* you may also like */
+
+#liking_div{
+    width: 86%;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-gap:10px;
+    /* border: 1px solid black; */
+    overflow-x: scroll;
+}
+#like{
+    font-weight: 400;
+    font-size: 24px;
+    margin:5px 100px;
+    color: #122344;
+}
+.like_dress{
+    /* border: 1px solid black; */
+    width: 88%;
+    height: auto;
+    width: 250px;
+}
+.like_dress>p{
+    font-size: 12px;
+    font-family: 400;
+    color: #666666;
+    line-height: 14px;
+}
+.text{
+    width: 50%;
+    margin: 55px auto;
+    text-align: center;
+}
+.text p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #999999;
+}
