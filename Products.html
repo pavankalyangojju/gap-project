@@ -139,8 +139,11 @@ document.getElementById("right").append(div);
                   
                }  
     function  single(elem){
-
-        localStorage.setItem("single_product",JSON.stringify(elem));
+      var  singleProduct = [];
+    singleProduct.push(elem);
+   // localStorage.removeItem("single_product");
+    localStorage.setItem("single_product",JSON.stringify(singleProduct));
+    window.location.href = "browseProducts.html";
     }
                
     
