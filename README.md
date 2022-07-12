@@ -29,6 +29,7 @@ https://gap-website-project.netlify.app/
 - #### [Shreya](https://www.linkedin.com/in/shreya-pannase-382814214/)
 - #### [Tejaswini](https://www.linkedin.com/in/tejaswini-shreeramwar/)
 - #### [Aditya kumar](https://www.linkedin.com/in/aditya-kumar-898a9814a/) 
+- #### [G Pavan Kalyan](https://www.linkedin.com/in/pavan-kalyan-aa83741b3/)
 
 ## Tech Stack :- 
 
